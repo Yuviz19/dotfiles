@@ -1,0 +1,99 @@
+/* ────────────────────────────── Global ────────────────────────────── */
+* {
+    font:            "JetBrains Mono Nerd Font 12";
+    g-spacing:       10px;
+    g-margin:        0;
+    b-color:         #FFFFFF1A;
+    fg-color:        #EBEBF5E6;
+    fgp-color:       #C8C8D880;
+    b-radius:        10px;
+    g-padding:       8px;
+    hl-color:        #89B4FA66;
+    hlt-color:       #FFFFFFFF;
+    alt-color:       #FFFFFF08;
+    wbg-color:       #141423FF;
+    w-border:        2px solid;
+    w-border-color: #89B4FA66;
+    w-padding:       14px;
+}
+
+/* ─────────────────────────── Configuration ────────────────────────── */
+configuration {
+    modi:            "drun";
+    show-icons:      true; 
+    icon-theme:      "Papirus"; 
+    display-drun:    "";
+}
+
+/* ────────────────────────────── Drun ─────────────────────────────── */
+drun {
+    expand:          true;
+    case-sensitive:  false;
+}
+
+/* ───────────────────────────── Window ────────────────────────────── */
+window {
+    width:           450px;
+    border-radius:   @b-radius;
+    background-color:@wbg-color;
+    border:          @w-border;
+    border-color:    @w-border-color;
+    padding:         @w-padding;
+}
+
+/* ───────────────────────────── Layout ────────────────────────────── */
+listview {
+    columns:         1;
+    lines:           7;
+    fixed-height:    true;
+    fixed-columns:   true;
+    cycle:           false;
+    scrollbar:       false;
+    border:          0px;
+}
+
+inputbar {
+    children:        [prompt, entry];
+    spacing:         @g-spacing;
+}
+
+prompt { text-color: @fg-color; }
+
+entry {
+    placeholder:     "Hello!";
+    text-color:      @fg-color;
+    placeholder-color: @fgp-color;
+}
+
+mainbox {
+    spacing:         @g-spacing;
+    margin:          @g-margin;
+    padding:         @g-padding;
+    children:        [inputbar, listview, message];
+}
+
+element {
+    spacing:         @g-spacing;
+    padding:         @g-padding;
+    border-radius:   @b-radius;
+    border-color:    @b-color;
+    background-color: transparent;
+    text-color:      @fg-color;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg-color;
+}
+
+element selected.active,
+element selected.normal {
+    background-color: @hl-color;
+    text-color:       @hlt-color;
+}
+
+message {
+    background-color: transparent;
+    border:           0px;
+}

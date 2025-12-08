@@ -1,0 +1,86 @@
+/*
+ * Rofi theme for Wallpaper Grid
+ * (Simplified version with no variables)
+ */
+
+window {
+    transparency:     "real";
+    border-radius:    10px;
+    background-color: #14142340;
+    border:           2px solid #89B4FA66;
+    padding:          14px;
+    width:            80%;
+    height:           80%;
+    font:             "JetBrains Mono Nerd Font 12";
+}
+
+mainbox {
+    spacing:          10px;
+    margin:           0;
+    padding:          8px;
+    children:         [inputbar, listview, message];
+}
+
+inputbar {
+    children:         [prompt, entry];
+    spacing:          10px;
+}
+
+prompt { 
+    text-color:       #EBEBF5E6; 
+}
+
+entry {
+    placeholder:      "Search wallpapers...";
+    text-color:       #EBEBF5E6;
+    placeholder-color: #C8C8D880;
+}
+
+message {
+    background-color: transparent;
+    border:           0px;
+}
+
+listview {
+    columns:          5;
+    lines:            3;
+    spacing:          10px;
+    fixed-height:     true;
+    fixed-columns:    true;
+    cycle:            false;
+    scrollbar:        false;
+    border:           0px;
+}
+
+element {
+    orientation:      vertical; 
+    spacing:          10px;
+    padding:          8px;
+    border-radius:    10px;
+    border-color:     #FFFFFF1A;
+    background-color: transparent;
+    text-color:       #EBEBF5E6;
+}
+
+element-icon {
+    size:             128px;
+    expand:           false;
+    border-radius:    10px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    text-color:       inherit;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color:       #EBEBF5E6;
+}
+
+element selected.active,
+element selected.normal {
+    background-color: #89B4FA66;
+    text-color:       #FFFFFFFF;
+}
