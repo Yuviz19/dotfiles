@@ -1,0 +1,35 @@
+@import "colors.rasi"
+
+window {
+    width:                        600px;
+    location:                     center;
+    anchor:                       center;
+    y-offset:                     -150px;
+    border:                       2px;
+    border-color:                 @selected;
+    border-radius:                20px;
+    background-color:             @background;
+}
+
+listview {
+    columns:                     1;
+    lines:                       8;
+    fixed-height:                false;
+    dynamic:                     true;
+    scrollbar:                   false;
+    padding:                     15px;
+    spacing:                     10px;
+    background-color:            transparent;
+}
+
+element {
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  #1e2030;
+}

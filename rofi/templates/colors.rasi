@@ -1,0 +1,7 @@
+* {
+    background:     {{colors.surface.default.hex}}e6; 
+    background-alt: {{colors.surface_container.default.hex}};
+    foreground:     {{colors.on_surface.default.hex}};
+    selected:       {{colors.primary.default.hex}};
+    border-col:     {{colors.outline.default.hex}};
+}

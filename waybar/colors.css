@@ -1,0 +1,7 @@
+@define-color main-bg #12140d;
+@define-color main-fg #e3e3d7;
+@define-color accent #b7d084;
+/* We use the hex code directly and handle transparency in the style.css */
+@define-color accent-hex #b7d084;
+@define-color surface-alt #1e2019;
+@define-color foreground #e3e3d7;

@@ -1,0 +1,53 @@
+configuration {
+    show-icons:                 false;
+    drun-display-format:        "{name}";
+}
+@import "colors.rasi"
+window {
+    width:                        200px;
+    height:                       370px;
+    border:                       3px;
+    border-color:                 @selected;
+    border-radius:                30px;
+    background-color:             @background;
+    location:                     west;
+    anchor:                       west;
+    x-offset:                     50px;
+}
+mainbox {
+    background-color:            transparent;
+    children:                    [ "listview" ];
+    padding:                     30px; 
+}
+listview {
+    columns:                     1;
+    lines:                       5;
+    spacing:                     15px;
+    cycle:                       true;
+    dynamic:                     true;
+    layout:                      vertical;
+    background-color:            transparent;
+    fixed-height:                true;
+    fixed-columns:               true;
+    scrollbar:                   false;
+}
+element {
+    orientation:                 vertical;
+    padding:                     25px;
+    border-radius:               20px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+element-text {
+    font:                        "JetBrainsMono Nerd Font 20";
+    background-color:            transparent;
+    text-color:                  inherit;
+    expand:                      true;
+    horizontal-align:            0.5;
+    vertical-align:              0.5;
+}
+
